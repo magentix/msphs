@@ -50,7 +50,7 @@ function parseRequest(string $request): array
         if (!isset($header[0], $header[1])) {
             continue;
         }
-        $result['headers'][strtolower($header[0])] = $header[1];
+        $result['headers'][trim(strtolower($header[0]))] = trim($header[1]);
     }
 
     return $result;
